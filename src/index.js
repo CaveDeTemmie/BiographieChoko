@@ -4,5 +4,5 @@ let buttonClick = () => {
    };
    const link = `https://3hentai.net/d/${genNumber()}`;
    const text = document.getElementById("hentai");
-   text.innerHTML = `<a href=${link} target="_blank">Hey</a>`;
+   text.innerHTML = `<a href=${link} style="color: black">Il a un petit secret</a>`;
 };
