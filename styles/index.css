@@ -1,0 +1,21 @@
+body {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Haut-Page {
+   text-align: center;
+   color: rgb(0, 0, 0);
+}
+
+table.tableau {
+   border-collapse: collapse;
+}
+table.tableau td,
+table.tableau th {
+   border: 1px solid rgb(0, 0, 0);
+}
+
+.tableau {
+   text-align: center;
+   margin: 0 auto;
+}
