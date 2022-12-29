@@ -11,3 +11,4 @@ let singe = () => {
    const audio = new Audio("../sound/singe.mp3");
    audio.play();
 };
+
