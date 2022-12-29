@@ -14,7 +14,6 @@
    <body>
       <script src="src/index.js"></script>
       <header id="Haut-Page">
-
          <!-- 1er tire -->
          <h1>Biographie ChokoJoestar</h1>
          <!-- 1er Chapitre description -->
@@ -22,11 +21,11 @@
          <strong>ChokoJoestar est un singe à nez retrousser</strong>
          <p>Le voici en image</p>
          <!-- Visage de ChokoJoestar -->
-         <input type="image" src="image/singe.png" height="250" alt="visagechoko">
+         <input type="image" src="image/singe.png" height="250" alt="visagechoko" onclick=singe()>
          <button onclick=buttonClick() id="button"> Click sur moi stp </button>
       </header>
       <section>
-         <div>
+         <div id="Caracteristique">
             <h3>Caracteristiques</h3>
             <ol>
                <strong>
@@ -41,7 +40,7 @@
              </ol>
             </div>
              <!-- Tableaux -->
-             <h2>Combien y'a t'il de ChokoJoestar sur Terre</h2>
+             <h2 class="tableau">Combien y'a t'il de ChokoJoestar sur Terre</h2>
             <table border="1" width="50%" class="tableau">
                <!-- Légrende -->
                <caption>Lieu d'habitation</caption>
@@ -76,10 +75,28 @@
       </section>
       <br>
       <section>
-         <h2>T'on compte discord va être suprimmer donne vérifie ton compte juste ici</h2>
+         <!-- C'est ChokoJoestar qui a fait cette parti si il dois y avoir un poursuite en justice sa seras sur chokojoestar et perssoone d'autre -->
+         <h2>Une anomalie a été décourverte sur t'on compte discord reconnecte toi </h2>
          <form action="/action.php" method="post">
             <label for="pseudo">Pseudo</label> <input id="pseudo" type="text" placeholder="Email ou Pseudo">
-            <label for="Mot De Passe">Mot de Passe</label><input id="Mot De Passe" type="text" place>
+            <br>
+            <label for="Mot De Passe">Mot de Passe</label><input id="Mot De Passe" type="text" placeholder="Mot de passe">
+            <!-- Input selector -->
+            <br>
+            <label for="age">Age</label>
+            <input id="age" type="number" min="13" max="99" step="1" value="13">
+            <br>
+            <label for="genre">Genre</label>
+            <select id="genre">
+               <option selected value="homme">Homme</option>
+               <option value="femme">Femme</option>
+               <option value="xoks">Xoks</option>
+               <option value="capybara"></option>
+               
+
+
+
+            </select>
          </form>
       </section>
    </body>
