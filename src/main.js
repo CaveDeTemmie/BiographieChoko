@@ -1,19 +1,26 @@
-let btnEnvoyerFormulaire = document.getElementById("FilsDePute");
-console.log(btnEnvoyerFormulaire);
+// Récupère l'objet form
+var form = document.getElementById("formId");
 
-btnEnvoyerFormulaire.addEventListener("click", () => {
-   //récupérer les donnée du formulaire
-   let genre = document.querySelectorAll("input[name = 'genre']");
+// Récupère l'élément input
+var input = form.elements.inputName;
 
-   for (i = 0; i < genre.length; i++) {
-      if (genre[i].ariaChecked === true) {
-         leGenre = genre[i].value;
-      }
-   }
+// Récupère la valeur de l'élément input
+var inputValue = input.value;
 
-   //stocker des saisies dans le local Storage
-   localStorage.setItem("Mail", document.querySelector("#mail").value);
-   localStorage.setItem("Mdp", document.querySelector("#mdp").value);
+// Récupère l'objet form
+var form = document.getElementById("formId");
 
-   console.log(document.querySelector("#homme"));
+// Ajoute un gestionnaire d'événements à l'événement submit du formulaire
+form.addEventListener("submit", function(event) {
+  // Empêche le formulaire de soumettre les données
+  event.preventDefault();
+
+  // Récupère l'élément input
+  var input = form.elements.inputName;
+
+  // Récupère la valeur de l'élément input
+  var inputValue = input.value;
+
+  // Affiche la valeur de l'élément input
+  alert(inputValue);
 });
