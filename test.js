@@ -16,7 +16,7 @@ function startTimer() {
     document.getElementById("time").innerHTML = days + " jours, " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes";
     if (diff <= 0) {
       clearInterval(timer);
-      document.getElementById("time").innerHTML = "Fin de l'année 2023 !";
+      document.getElementById("time").innerHTML = "confetti()";
     }
   }, 1000);
 }
@@ -28,4 +28,9 @@ function stopTimer() {
 function resetTimer() {
   clearInterval(timer);
   document.getElementById("time").innerHTML = "";
+}
+if (diff <= 0) {
+  clearInterval(timer);
+  document.getElementById("time").innerHTML = "1er janvier 2023 !";
+  confetti();
 }
