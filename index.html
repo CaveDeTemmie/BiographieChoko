@@ -14,7 +14,7 @@
 </head>
 
 <body>
-   <script src="src/index.js"></script>
+   <script src="dist/index.js"></script>
    <div id="Haut-Page">
       <!-- 1er tire -->
       <h1>Biographie ChokoJoestar</h1>
@@ -27,13 +27,14 @@
          <strong>ChokoJoestar est un singe à nez retrousser</strong>
          <p>Le voici en image</p>
          <!-- Visage de ChokoJoestar -->
-         <input type="image" src="Image/singe.png" height="200" alt="visagechoko" onclick=singe()>
+         <input type="image" src="Image/singe.png" height="150" alt="visagechoko" onclick=singe()>
+         <br>
          <button onclick=buttonClick() id="button"> Click sur moi stp </button>
       </div>
       <div id="Caracteristique">
          <h3>Caracteristiques</h3>
          <ol>
-            <strong>
+            <strong id="caraclist">
                <li>Cours Vite </li>
                <li>Fait beaucoup de dégàts</li>
                <li>Il n'a pas de sexe</li>
@@ -71,17 +72,17 @@
       </div>
       <div id="Liens">
          <h3>Le Serveur où il se trouve</h3>
+         <div id="Listlien">
          <a href="https://discord.gg/prXbMtn2" target="_blank">CaveDeTemmie</a>
          <br>
          <a href="http://downloadramdownloadramdownloadram.com/?i=1" target="_blank">UwU</a>
          <br>
          <a href="https://discord.com/invite/9Z4Yv87Mxc" target="_blank">Sankine</a>
+         </div>
       </div>
       <div id ="Esclave">
-      <dir>
       <h3>Son esclave</h3>
       <video src="video/IShowSpeed_Cries_After_PC_Falls_On_His_Head_.mp4" height="150"></video>
-      </dir>
       </div>
    </div>
    <br>
@@ -107,9 +108,49 @@
          <br>
          <label for="age">Age</label>
          <input type="number" min="1" max="99" step="1" value="13">
+         <div id="accepter">
          <label><input type="checkbox" />Accepter vous les condition d'utilisation</label>
-         <button id="FilsDePute">Envoyer formulaire</button>=
-         <script src="./src/main.js"></script>
+         <br>
+         <button id="FilsDePute">Envoyer formulaire</button>
+         </div>
+   </section>
+   <section>
+      <h1>Minuteur</h1>
+    <p>Temps restant : <span id="time">1500</span> secondes</p>
+    <button onclick="startTimer()">Démarrer</button>
+    <button onclick="stopTimer()">Arrêter</button>
+    <button onclick="resetTimer()">Réinitialiser</button>
+    <script>
+      let count = 1500;
+      let timer;
+
+      function startTimer() {
+        timer = setInterval(function() {
+          count--;
+          document.getElementById("time").innerHTML = count;
+          if (count === 0) {
+            clearInterval(timer);
+          }
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        count = 1500;
+        document.getElementById("time").innerHTML = count;
+      }
+    </script>
+
+
+
+
+
+
+      
    </section>
 </body>
 
